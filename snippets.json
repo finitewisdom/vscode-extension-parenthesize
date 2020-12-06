@@ -1,0 +1,33 @@
+{
+	"Parenthesize With Spacing": {
+		"prefix": "( selection )",
+		"body": [ "( $TM_SELECTED_TEXT )" ],
+		"description": "Enclose the current selection in parentheses, with spacing",
+		"command": "extension.helloworld.parenthesizeWithSpacing"
+	},
+	"Parenthesize Without Spacing": {
+		"prefix": "(selection)",
+		"body": [ "($TM_SELECTED_TEXT)" ],
+		"description": "Enclose the current selection in parentheses, without spacing"
+	},
+	"Curly Bracketize With Spacing": {
+		"prefix": "{ selection }",
+		"body": [ "{ $TM_SELECTED_TEXT }" ],
+		"description": "Enclose the current selection in curly brackets, with spacing"
+	},
+	"Curly Bracketize Without Spacing": {
+		"prefix": "{selection}",
+		"body": [ "{$TM_SELECTED_TEXT}" ],
+		"description": "Enclose the current selection in curly brackets, without spacing"
+	},
+	"Square Bracketize With Spacing": {
+		"prefix": "[ selection ]",
+		"body": [ "[ $TM_SELECTED_TEXT ]" ],
+		"description": "Enclose the current selection in square brackets, with spacing"
+	},
+	"Square Bracketize Without Spacing": {
+		"prefix": "[selection]",
+		"body": [ "[$TM_SELECTED_TEXT]" ],
+		"description": "Enclose the current selection in square brackets, without spacing"
+	}
+}

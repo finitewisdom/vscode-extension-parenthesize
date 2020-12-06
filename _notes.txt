@@ -1,0 +1,8 @@
+todo
+====
+* need to determine how to define commands for our insertsnippet, so we can then define keybindings for it 
+
+- remove vestiges of "helloworld"
+- add support for < >
+
+---> next: propagate paren changes to brackets (curly and square)

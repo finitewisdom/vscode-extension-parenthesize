@@ -1,0 +1,88 @@
+{
+	"name": "helloworld",
+	"displayName": "HelloWorld",
+	"description": "",
+	"version": "0.0.1",
+	"engines": {
+		"vscode": "^1.51.0"
+	},
+	"categories": [
+		"Snippets"
+	],
+	"activationEvents": [
+		"onCommand:helloworld.parenthesizeWithSpacing",
+		"onCommand:helloworld.parenthesizeWithOutSpacing"
+	],
+	"main": "./extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "helloworld.parenthesizeWithSpacing",
+				"title": "Parenthesize: Enclose in ( ), With Spacing"
+			},
+			{
+				"command": "helloworld.parenthesizeWithoutSpacing",
+				"title": "Parenthesize: Enclose in ( ), Without Spacing"
+			}
+		],
+		"snippets": [
+			{
+				"language": "javascript",
+				"path": "./snippets.json"
+			}
+		],
+		"keybindings": [
+			{
+				"key": "ctrl+k F1",
+				"command": "helloworld.parenthesizeWithSpacing",
+				"when": "editorHasSelection || editorHasMultipleSelections"
+			},
+			{
+				"key": "ctrl+k F2",
+				"command": "helloworld.parenthesizeWithoutSpacing",
+				"args": { "name": "Parenthesize Without Spacing" },
+				"when": "editorHasSelection || editorHasMultipleSelections"
+			},
+			{
+				"key": "ctrl+k F3",
+				"command": "editor.action.insertSnippet",
+				"args": { "name": "Curly Bracketize With Spacing" },
+				"when": "editorHasSelection || editorHasMultipleSelections"
+			},
+			{
+				"key": "ctrl+k F4",
+				"command": "editor.action.insertSnippet",
+				"args": { "name": "Curly Bracketize Without Spacing" },
+				"when": "editorHasSelection || editorHasMultipleSelections"
+			},
+			{
+				"key": "ctrl+k F5",
+				"command": "editor.action.insertSnippet",
+				"args": { "name": "Square Bracketize With Spacing" },
+				"when": "editorHasSelection || editorHasMultipleSelections"
+			},
+			{
+				"key": "ctrl+k F6",
+				"command": "editor.action.insertSnippet",
+				"args": { "name": "Square Bracketize Without Spacing" },
+				"when": "editorHasSelection || editorHasMultipleSelections"
+			}
+		]
+	},
+	"scripts": {
+		"lint": "eslint .",
+		"pretest": "npm run lint",
+		"test": "node ./test/runTest.js"
+	},
+	"devDependencies": {
+		"@types/vscode": "^1.51.0",
+		"@types/glob": "^7.1.3",
+		"@types/mocha": "^8.0.0",
+		"@types/node": "^12.11.7",
+		"eslint": "^7.9.0",
+		"glob": "^7.1.6",
+		"mocha": "^8.1.3",
+		"typescript": "^4.0.2",
+		"vscode-test": "^1.4.0"
+	}
+}
