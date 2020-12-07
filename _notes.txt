@@ -10,6 +10,8 @@ todo
 * use tinyurl
 * next: flesh out the package.json according to this:
     * https://code.visualstudio.com/api/references/extension-manifest
+* why doesn't icon work?
+	"icon": "https://tinyurl.com/yy3299vy",
 
 - test: https://code.visualstudio.com/api/working-with-extensions/testing-extension
     - how to write tests?

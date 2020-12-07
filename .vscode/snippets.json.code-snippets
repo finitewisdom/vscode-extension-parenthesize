@@ -1,7 +1,0 @@
-{
-	"Parenthesize": {
-		"prefix": "()",
-		"body": [ "( $TM_SELECTED_TEXT )" ],
-		"description": "Parenthesize the current selection"
-	}
-}
