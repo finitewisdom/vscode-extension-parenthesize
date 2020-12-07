@@ -3,7 +3,7 @@
 	"displayName": "Parenthesize",
 	"publisher": "finitewisdom",
 	"description": "The Parenthesize extension for Visual Studio Code makes it easy to wrap one or more selections with parentheses, square brackets, curly brackets, or angle brackets.",
-	"version": "1.0.1",
+	"version": "1.0.3",
 	"license": "MIT",
 	"repository": {
 		"type": "git",
@@ -19,7 +19,7 @@
 	"icon": "parentheses.png",
 	"galleryBanner": {
 		"color": "#005DA6",
-		"theme": "light"
+		"theme": "dark"
 	},
 	"activationEvents": [
 		"onCommand:parenthesize.parenthesizeWithSpacing",
