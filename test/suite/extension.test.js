@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 const assert = require('assert');
 
 // You can import and use all API from the 'vscode' module

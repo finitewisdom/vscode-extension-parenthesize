@@ -1,8 +1,15 @@
 todo
 ====
 * need to determine how to define commands for our insertsnippet, so we can then define keybindings for it 
+* remove vestiges of "helloworld"
+* add support for < >
+* next: propagate paren changes to brackets (curly and square)
+* images:
+    * https://images.squarespace-cdn.com/content/v1/5489b1f6e4b0c7fbb9e64fcb/1607289923297-Y9NB9GKTJVLYWY5CZIZ0/ke17ZwdGBToddI8pDm48kIoROSDD4lVJs1bPdoehXqxZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZUJFbgE-7XRK3dMEBRBhUpztZC06MAEv11vwTNBayTMRrxGmMH3MEbxBrISoI476kJcdCciiUAWwlmJFsodBP_g/command-palette.jpg
+    * https://images.squarespace-cdn.com/content/v1/5489b1f6e4b0c7fbb9e64fcb/1607289944960-M1KXOMC1VA32W7VKQVHD/ke17ZwdGBToddI8pDm48kHHmqOcC2SvzMbq_WyX7KcNZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZUJFbgE-7XRK3dMEBRBhUpxdeiAq0ZNkZkSKYm1pGPF_5erEEsnsfdNgIzm51Ydo_4OUJT1gBJn_UqAR6EOS3TI/keyboard-shortcuts.png
+* use tinyurl
+* next: flesh out the package.json according to this:
+    * https://code.visualstudio.com/api/references/extension-manifest
 
-- remove vestiges of "helloworld"
-- add support for < >
-
----> next: propagate paren changes to brackets (curly and square)
+- test: https://code.visualstudio.com/api/working-with-extensions/testing-extension
+    - how to write tests?

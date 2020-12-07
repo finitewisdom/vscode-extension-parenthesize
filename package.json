@@ -1,70 +1,117 @@
 {
-	"name": "helloworld",
-	"displayName": "HelloWorld",
-	"description": "",
-	"version": "0.0.1",
+	"name": "parenthesize",
+	"displayName": "Parenthesize",
+	"publisher": "finitewisdom",
+	"description": "The Parenthesize extension for Visual Studio Code makes it easy to wrap one or more selections with parentheses, square brackets, curly brackets, or angle brackets.",
+	"version": "1.0.1",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/finitewisdom/vscode-extension-parenthesize"
+	},
+	"homepage": "https://github.com/finitewisdom/vscode-extension-parenthesize/blob/master/README.md",
 	"engines": {
 		"vscode": "^1.51.0"
 	},
-	"categories": [
-		"Snippets"
-	],
+	"categories": [ "Snippets", "Programming Languages", "Other" ],
+	"keywords": [ "wrap", "enclose", "surround", "parentheses", "brackets" ],
+	"preview": true,
+	"icon": "https://tinyurl.com/yy3299vy",
+	"galleryBanner": {
+		"color": "#005DA6",
+		"theme": "light"
+	},
 	"activationEvents": [
-		"onCommand:helloworld.parenthesizeWithSpacing",
-		"onCommand:helloworld.parenthesizeWithOutSpacing"
+		"onCommand:parenthesize.parenthesizeWithSpacing",
+		"onCommand:parenthesize.parenthesizeWithOutSpacing",
+		"onCommand:parenthesize.curlyBracketizeWithSpacing",
+		"onCommand:parenthesize.curlyBracketizeWithOutSpacing",
+		"onCommand:parenthesize.squareBracketizeWithSpacing",
+		"onCommand:parenthesize.squareBracketizeWithOutSpacing",
+		"onCommand:parenthesize.angleBracketizeWithSpacing",
+		"onCommand:parenthesize.angleBracketizeWithOutSpacing"
 	],
 	"main": "./extension.js",
 	"contributes": {
 		"commands": [
 			{
-				"command": "helloworld.parenthesizeWithSpacing",
-				"title": "Parenthesize: Enclose in ( ), With Spacing"
+				"command": "parenthesize.parenthesizeWithSpacing",
+				"title": "Parenthesize: Enclose Selection(s) in ( ), With Spacing"
 			},
 			{
-				"command": "helloworld.parenthesizeWithoutSpacing",
-				"title": "Parenthesize: Enclose in ( ), Without Spacing"
-			}
-		],
-		"snippets": [
+				"command": "parenthesize.parenthesizeWithoutSpacing",
+				"title": "Parenthesize: Enclose Selection(s) in ( ), Without Spacing"
+			},
 			{
-				"language": "javascript",
-				"path": "./snippets.json"
+				"command": "parenthesize.curlyBracketizeWithSpacing",
+				"title": "Parenthesize: Enclose Selection(s) in { }, With Spacing"
+			},
+			{
+				"command": "parenthesize.curlyBracketizeWithoutSpacing",
+				"title": "Parenthesize: Enclose Selection(s) in { }, Without Spacing"
+			},
+			{
+				"command": "parenthesize.squareBracketizeWithSpacing",
+				"title": "Parenthesize: Enclose Selection(s) in [ ], With Spacing"
+			},
+			{
+				"command": "parenthesize.squareBracketizeWithoutSpacing",
+				"title": "Parenthesize: Enclose Selection(s) in [ ], Without Spacing"
+			},
+			{
+				"command": "parenthesize.angleBracketizeWithSpacing",
+				"title": "Parenthesize: Enclose Selection(s) in < >, With Spacing"
+			},
+			{
+				"command": "parenthesize.angleBracketizeWithoutSpacing",
+				"title": "Parenthesize: Enclose Selection(s) in < >, Without Spacing"
 			}
 		],
+        "snippets": [
+        	{
+        		"language": "javascript",
+        		"path": "./snippets.json"
+        	}
+        ],
 		"keybindings": [
 			{
 				"key": "ctrl+k F1",
-				"command": "helloworld.parenthesizeWithSpacing",
+				"command": "parenthesize.parenthesizeWithSpacing",
+				"when": "editorHasSelection || editorHasMultipleSelections"
+			},
+			{
+				"key": "ctrl+k shift-F1",
+				"command": "parenthesize.parenthesizeWithoutSpacing",
 				"when": "editorHasSelection || editorHasMultipleSelections"
 			},
 			{
 				"key": "ctrl+k F2",
-				"command": "helloworld.parenthesizeWithoutSpacing",
-				"args": { "name": "Parenthesize Without Spacing" },
+				"command": "parenthesize.squareBracketizeWithSpacing",
+				"when": "editorHasSelection || editorHasMultipleSelections"
+			},
+			{
+				"key": "ctrl+k shift-F2",
+				"command": "parenthesize.squareBracketizeWithoutSpacing",
 				"when": "editorHasSelection || editorHasMultipleSelections"
 			},
 			{
 				"key": "ctrl+k F3",
-				"command": "editor.action.insertSnippet",
-				"args": { "name": "Curly Bracketize With Spacing" },
+				"command": "parenthesize.curlyBracketizeWithSpacing",
+				"when": "editorHasSelection || editorHasMultipleSelections"
+			},
+			{
+				"key": "ctrl+k shift-F3",
+				"command": "parenthesize.curlyBracketizeWithoutSpacing",
 				"when": "editorHasSelection || editorHasMultipleSelections"
 			},
 			{
 				"key": "ctrl+k F4",
-				"command": "editor.action.insertSnippet",
-				"args": { "name": "Curly Bracketize Without Spacing" },
+				"command": "parenthesize.angleBracketizeWithSpacing",
 				"when": "editorHasSelection || editorHasMultipleSelections"
 			},
 			{
-				"key": "ctrl+k F5",
-				"command": "editor.action.insertSnippet",
-				"args": { "name": "Square Bracketize With Spacing" },
-				"when": "editorHasSelection || editorHasMultipleSelections"
-			},
-			{
-				"key": "ctrl+k F6",
-				"command": "editor.action.insertSnippet",
-				"args": { "name": "Square Bracketize Without Spacing" },
+				"key": "ctrl+k shift-F4",
+				"command": "parenthesize.angleBracketizeWithoutSpacing",
 				"when": "editorHasSelection || editorHasMultipleSelections"
 			}
 		]

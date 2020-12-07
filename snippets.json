@@ -1,33 +1,34 @@
 {
-	"Parenthesize With Spacing": {
+	"parenthesize.parenthesizeWithSpacing": {
 		"prefix": "( selection )",
-		"body": [ "( $TM_SELECTED_TEXT )" ],
-		"description": "Enclose the current selection in parentheses, with spacing",
-		"command": "extension.helloworld.parenthesizeWithSpacing"
+		"body": [ "( $TM_SELECTED_TEXT )" ]
 	},
-	"Parenthesize Without Spacing": {
+	"parenthesize.parenthesizeWithoutSpacing": {
 		"prefix": "(selection)",
-		"body": [ "($TM_SELECTED_TEXT)" ],
-		"description": "Enclose the current selection in parentheses, without spacing"
+		"body": [ "($TM_SELECTED_TEXT)" ]
 	},
-	"Curly Bracketize With Spacing": {
+	"parenthesize.curlyBracketizeWithSpacing": {
 		"prefix": "{ selection }",
-		"body": [ "{ $TM_SELECTED_TEXT }" ],
-		"description": "Enclose the current selection in curly brackets, with spacing"
+		"body": [ "{ $TM_SELECTED_TEXT }" ]
 	},
-	"Curly Bracketize Without Spacing": {
+	"parenthesize.curlyBracketizeWithoutSpacing": {
 		"prefix": "{selection}",
-		"body": [ "{$TM_SELECTED_TEXT}" ],
-		"description": "Enclose the current selection in curly brackets, without spacing"
+		"body": [ "{$TM_SELECTED_TEXT}" ]
 	},
-	"Square Bracketize With Spacing": {
+	"parenthesize.squareBracketizeWithSpacing": {
 		"prefix": "[ selection ]",
-		"body": [ "[ $TM_SELECTED_TEXT ]" ],
-		"description": "Enclose the current selection in square brackets, with spacing"
+		"body": [ "[ $TM_SELECTED_TEXT ]" ]
 	},
-	"Square Bracketize Without Spacing": {
+	"parenthesize.squareBracketizeWithoutSpacing": {
 		"prefix": "[selection]",
-		"body": [ "[$TM_SELECTED_TEXT]" ],
-		"description": "Enclose the current selection in square brackets, without spacing"
+		"body": [ "[$TM_SELECTED_TEXT]" ]
+	},
+	"parenthesize.angleBracketizeWithSpacing": {
+		"prefix": "< selection >",
+		"body": [ "< $TM_SELECTED_TEXT >" ]
+	},
+	"parenthesize.angleBracketizeWithoutSpacing": {
+		"prefix": "<selection>",
+		"body": [ "<$TM_SELECTED_TEXT>" ]
 	}
 }
